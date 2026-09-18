@@ -1,0 +1,18 @@
+{
+  "name": "orangehrm-playwright-tests",
+  "version": "1.0.0",
+  "description": "Playwright E2E tests for OrangeHRM (PIM, ESS, Claim)",
+  "scripts": {
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.3"
+  }
+}

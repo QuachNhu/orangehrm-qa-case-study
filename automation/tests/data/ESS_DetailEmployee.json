@@ -1,0 +1,109 @@
+[
+  { "id": "CD_DT_01", "desc": "Street 1 = 70 chars", "actions": [{ "field": "Street 1", "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" }], "isValid": true },
+  { "id": "CD_DT_02", "desc": "Street 1 > 70 chars", "actions": [{ "field": "Street 1", "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" }], "isValid": false, "expectedError": "Should not exceed 70 characters" },
+
+  { "id": "CD_DT_03", "desc": "Street 2 = 70 chars", "actions": [{ "field": "Street 2", "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB" }], "isValid": true },
+  { "id": "CD_DT_04", "desc": "Street 2 > 70 chars", "actions": [{ "field": "Street 2", "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB" }], "isValid": false, "expectedError": "Should not exceed 70 characters" },
+
+  { "id": "CD_DT_05", "desc": "City = 70 chars", "actions": [{ "field": "City", "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" }], "isValid": true },
+  { "id": "CD_DT_06", "desc": "City > 70 chars", "actions": [{ "field": "City", "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" }], "isValid": false, "expectedError": "Should not exceed 70 characters" },
+
+  { "id": "CD_DT_07", "desc": "State/Province = 70 chars", "actions": [{ "field": "State/Province", "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB" }], "isValid": true },
+  { "id": "CD_DT_08", "desc": "State/Province > 70 chars", "actions": [{ "field": "State/Province", "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB" }], "isValid": false, "expectedError": "Should not exceed 70 characters" },
+
+  { "id": "CD_DT_09", "desc": "Zip Code = 10 chars", "actions": [{ "field": "Zip/Postal Code", "value": "1234567890" }], "isValid": true },
+  { "id": "CD_DT_10", "desc": "Zip Code > 10 chars", "actions": [{ "field": "Zip/Postal Code", "value": "12345678901" }], "isValid": false, "expectedError": "Should not exceed 10 characters" },
+
+  { "id": "CD_DT_11", "desc": "Home Phone = 25 chars", "actions": [{ "field": "Home", "value": "1234567890123456789012345" }], "isValid": true },
+  { "id": "CD_DT_12", "desc": "Home Phone > 25 chars", "actions": [{ "field": "Home", "value": "12345678901234567890123456" }], "isValid": false, "expectedError": "Should not exceed 25 characters" },
+
+  { "id": "CD_DT_13", "desc": "Work Phone = 25 chars", "actions": [{ "field": "Work", "value": "2234567890123456789012345" }], "isValid": true },
+
+  { "id": "CD_DT_14", "desc": "Mobile hợp lệ", "actions": [{ "field": "Mobile", "value": "+84 909-123-456" }], "isValid": true },
+  { "id": "CD_DT_15", "desc": "Mobile chứa chữ", "actions": [{ "field": "Mobile", "value": "090 PHONE 12" }], "isValid": false, "expectedError": "Allows numbers and only + - / ( )" },
+
+  {
+    "id": "CD_DT_16",
+    "desc": "Other Email = 50 chars (verified)",
+    "actions": [{ "field": "Other Email", "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@test.com" }],
+    "isValid": true
+  },
+  {
+    "id": "CD_DT_17",
+    "desc": "Other Email > 50 chars (verified)",
+    "actions": [{ "field": "Other Email", "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@test.com" }],
+    "isValid": false,
+    "expectedError": "Should not exceed 50 characters"
+  },
+
+  { "id": "CD_DT_18", "desc": "Work Email bắt đầu bằng -", "actions": [{ "field": "Work Email", "value": "-invalid@test.com" }], "isValid": false, "expectedError": "Work email contains invalid characters" },
+
+  {
+    "id": "CD_DT_19",
+    "desc": "Work Email trùng Other Email",
+    "actions": [
+      { "field": "Work Email", "value": "same@mail.com" },
+      { "field": "Other Email", "value": "same@mail.com" }
+    ],
+    "isValid": false,
+    "expectedError": "Work Email and Other Email cannot be the same"
+  },
+
+  { "id": "CD_DT_20", "desc": "Clear optional fields", "actions": [
+      { "field": "Street 1", "value": "" },
+      { "field": "City", "value": "" },
+      { "field": "Mobile", "value": "" }
+    ], "isValid": true },
+
+  {
+    "id": "CD_DT_21",
+    "desc": "Country giữ nguyên (dropdown không cho nhập text)",
+    "actions": [],
+    "isValid": true
+  },
+
+  { "id": "CD_DT_22", "desc": "Home Phone hợp lệ (space)", "actions": [{ "field": "Home", "value": "028 3835 123" }], "isValid": true },
+  { "id": "CD_DT_23", "desc": "Home Phone chứa chữ", "actions": [{ "field": "Home", "value": "028 HOME 01" }], "isValid": false, "expectedError": "Allows numbers and only + - / ( )" },
+
+  { "id": "CD_DT_24", "desc": "Work Email có newline", "actions": [{ "field": "Work Email", "value": "test@orange.com\n" }], "isValid": false, "expectedError": "Expected format: admin@example.com" },
+
+  { "id": "CD_DT_25", "desc": "Work Email thiếu @", "actions": [{ "field": "Work Email", "value": "abc.orange.com" }], "isValid": false, "expectedError": "Expected format: admin@example.com" },
+  { "id": "CD_DT_26", "desc": "Work Email thiếu domain", "actions": [{ "field": "Work Email", "value": "abc@" }], "isValid": false, "expectedError": "Expected format: admin@example.com" },
+
+  { "id": "CD_DT_27", "desc": "Work Email hợp lệ", "actions": [{ "field": "Work Email", "value": "valid@mail.com" }], "isValid": true },
+
+  { "id": "CD_DT_28", "desc": "Street 1 ký tự đặc biệt", "actions": [{ "field": "Street 1", "value": "227 Nguyen Van Cu #@!" }], "isValid": true },
+  { "id": "CD_DT_29", "desc": "Zip Code có space", "actions": [{ "field": "Zip/Postal Code", "value": "70000 123" }], "isValid": true },
+
+  { "id": "CD_DT_30", "desc": "Đổi Country hợp lệ", "actions": [{ "field": "Country", "value": "Viet Nam", "type": "dropdown" }], "isValid": true },
+
+  { "id": "CD_DT_31", "desc": "Empty Home Phone", "actions": [{ "field": "Home", "value": "" }], "isValid": true },
+  { "id": "CD_DT_32", "desc": "Empty Work Email", "actions": [{ "field": "Work Email", "value": "" }], "isValid": true },
+
+  { "id": "CD_DT_33", "desc": "Save without changes", "actions": [], "isValid": true },
+  { "id": "CD_DT_34", "desc": "Mobile update only", "actions": [{ "field": "Mobile", "value": "+84 912 345 678" }], "isValid": true },
+  { "id": "CD_DT_35", "desc": "Email update only", "actions": [{ "field": "Work Email", "value": "only.update@mail.com" }], "isValid": true },
+
+  { "id": "CD_DT_36", "desc": "Street + City update", "actions": [
+      { "field": "Street 1", "value": "12 ABC" },
+      { "field": "City", "value": "HCM" }
+    ], "isValid": true },
+
+  { "id": "CD_DT_37", "desc": "Full valid update", "actions": [
+      { "field": "Street 1", "value": "123 Test" },
+      { "field": "City", "value": "HCM" },
+      { "field": "Mobile", "value": "+84 900 111 222" }
+    ], "isValid": true },
+
+  { "id": "CD_DT_38", "desc": "Home Phone empty", "actions": [{ "field": "Home", "value": "" }], "isValid": true },
+  { "id": "CD_DT_39", "desc": "Other Email empty", "actions": [{ "field": "Other Email", "value": "" }], "isValid": true },
+
+  { "id": "CD_DT_40", "desc": "Save only", "actions": [], "isValid": true },
+
+  { "id": "CD_DT_41", "desc": "URL sai", "url": "pim/contactDetails/empNumber/9999", "isValid": false },
+
+  { "id": "CD_DT_42", "desc": "Update Mobile + Email", "actions": [
+      { "field": "Mobile", "value": "+84 999 888 777" },
+      { "field": "Work Email", "value": "multi@mail.com" }
+    ], "isValid": true }
+]

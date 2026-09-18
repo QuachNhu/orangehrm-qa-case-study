@@ -1,0 +1,118 @@
+[
+  {
+    "id": "PIM_DT_01",
+    "desc": "Thêm nhân viên hợp lệ",
+    "firstName": "John",
+    "middleName": "Doe",
+    "lastName": "Smith",
+    "empId": "AUTO_GEN", 
+    "photo": "valid.jpg",
+    "isValid": true
+  },
+  {
+    "id": "PIM_DT_02",
+    "desc": "Thêm nhân viên bỏ trống Employee ID (Hệ thống tự sinh ID)",
+    "firstName": "John",
+    "middleName": "",
+    "lastName": "Smith",
+    "empId": "", 
+    "photo": null,
+    "isValid": true
+  },
+  {
+    "id": "PIM_DT_03",
+    "desc": "Thêm nhân viên trùng Employee ID",
+    "firstName": "Jane",
+    "middleName": "",
+    "lastName": "Doe",
+    "empId": "EMP001",
+    "photo": null,
+    "isValid": false,
+    "errorField": "Employee Id",
+    "errorMessage": "Employee Id already exists"
+  },
+  {
+    "id": "PIM_DT_04",
+    "desc": "Thêm nhân viên ID quá 10 ký tự",
+    "firstName": "Test",
+    "middleName": "",
+    "lastName": "User",
+    "empId": "EMP12345678901",
+    "photo": null,
+    "isValid": false,
+    "errorField": "Employee Id",
+    "errorMessage": "Should not exceed 10 characters"
+  },
+  {
+    "id": "PIM_DT_05",
+    "desc": "Bỏ trống First Name",
+    "firstName": "",
+    "middleName": "",
+    "lastName": "Smith",
+    "empId": "AUTO_GEN",
+    "photo": null,
+    "isValid": false,
+    "errorField": "First Name",
+    "errorMessage": "Required"
+  },
+  {
+    "id": "PIM_DT_06",
+    "desc": "First Name quá 30 ký tự",
+    "firstName": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "middleName": "",
+    "lastName": "Smith",
+    "empId": "AUTO_GEN",
+    "photo": null,
+    "isValid": false,
+    "errorField": "First Name",
+    "errorMessage": "Should not exceed 30 characters"
+  },
+  {
+    "id": "PIM_DT_07",
+    "desc": "Bỏ trống Last Name",
+    "firstName": "John",
+    "middleName": "",
+    "lastName": "",
+    "empId": "AUTO_GEN",
+    "photo": null,
+    "isValid": false,
+    "errorField": "Last Name",
+    "errorMessage": "Required"
+  },
+  {
+    "id": "PIM_DT_08",
+    "desc": "Upload file ảnh sai định dạng",
+    "firstName": "John",
+    "middleName": "",
+    "lastName": "Smith",
+    "empId": "AUTO_GEN",
+    "photo": "invalid.bmp",
+    "isValid": false,
+    "errorField": "Photo",
+    "errorMessage": "File type not allowed"
+  },
+  {
+    "id": "PIM_DT_09",
+    "desc": "Middle Name quá 30 ký tự",
+    "firstName": "John",
+    "middleName": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+    "lastName": "Smith",
+    "empId": "AUTO_GEN",
+    "photo": null,
+    "isValid": false,
+    "errorField": "Middle Name",
+    "errorMessage": "Should not exceed 30 characters"
+  },
+  {
+    "id": "PIM_DT_10",
+    "desc": "Upload file ảnh quá dung lượng",
+    "firstName": "John",
+    "middleName": "",
+    "lastName": "Smith",
+    "empId": "AUTO_GEN",
+    "photo": "largefile.jpg",
+    "isValid": false,
+    "errorField": "Photo",
+    "errorMessage": "Attachment Size Exceeded"
+  }
+]

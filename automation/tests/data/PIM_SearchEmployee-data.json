@@ -1,0 +1,20 @@
+[
+  { "id": "PW_01", "jobTitle": "Software Engineer", "subUnit": "Engineering", "empStatus": "Full-Time", "include": "Current Employees Only" },
+  { "id": "PW_02", "jobTitle": "Software Engineer", "subUnit": "Software Dev", "empStatus": "Part-Time", "include": "Current and Past Employees" },
+  { "id": "PW_03", "jobTitle": "Software Engineer", "subUnit": "Sales Department", "empStatus": "Freelance", "include": "Past Employees Only" },
+  { "id": "PW_04", "jobTitle": "Software Engineer", "subUnit": "Branch A", "empStatus": "Probation", "include": "Current Employees Only" },
+  { "id": "PW_05", "jobTitle": "QA Engineer", "subUnit": "Engineering", "empStatus": "Part-Time", "include": "Past Employees Only" },
+  { "id": "PW_06", "jobTitle": "QA Engineer", "subUnit": "Software Dev", "empStatus": "Full-Time", "include": "Current Employees Only" },
+  { "id": "PW_07", "jobTitle": "QA Engineer", "subUnit": "Sales Department", "empStatus": "Probation", "include": "Current and Past Employees" },
+  { "id": "PW_08", "jobTitle": "QA Engineer", "subUnit": "Branch A", "empStatus": "Freelance", "include": "Current and Past Employees" },
+  { "id": "PW_09", "jobTitle": "Sales Manager", "subUnit": "Engineering", "empStatus": "Freelance", "include": "Current and Past Employees" },
+  { "id": "PW_10", "jobTitle": "Sales Manager", "subUnit": "Software Dev", "empStatus": "Probation", "include": "Past Employees Only" },
+  { "id": "PW_11", "jobTitle": "Sales Manager", "subUnit": "Sales Department", "empStatus": "Full-Time", "include": "Current Employees Only" },
+  { "id": "PW_12", "jobTitle": "Sales Manager", "subUnit": "Branch A", "empStatus": "Part-Time", "include": "Past Employees Only" },
+  { "id": "PW_13", "jobTitle": "HR Manager", "subUnit": "Engineering", "empStatus": "Probation", "include": "Current Employees Only" },
+  { "id": "PW_14", "jobTitle": "HR Manager", "subUnit": "Software Dev", "empStatus": "Freelance", "include": "Current Employees Only" },
+  { "id": "PW_15", "jobTitle": "HR Manager", "subUnit": "Sales Department", "empStatus": "Part-Time", "include": "Current and Past Employees" },
+  { "id": "PW_16", "jobTitle": "HR Manager", "subUnit": "Branch A", "empStatus": "Full-Time", "include": "Past Employees Only" },
+  { "id": "PW_17", "jobTitle": "Software Engineer", "subUnit": "Engineering", "empStatus": "Probation", "include": "Current and Past Employees" },
+  { "id": "PW_18", "jobTitle": "QA Engineer", "subUnit": "Software Dev", "empStatus": "Freelance", "include": "Current Employees Only" }
+]

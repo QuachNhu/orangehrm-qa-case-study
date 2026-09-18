@@ -1,0 +1,13 @@
+{
+  "name": "orangehrm-test-data-generator",
+  "version": "1.0.0",
+  "description": "Generates employees, master data and claims for OrangeHRM directly into MySQL",
+  "type": "module",
+  "scripts": {
+    "generate": "node src/generate-data.js"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.0.0",
+    "mysql2": "^3.11.0"
+  }
+}
