@@ -14,13 +14,13 @@ Course project for Software Testing (CSC13003), University of Science, VNU-HCM, 
 | GUI / cross-browser | Checklists of 30+ items for *Add Employee* and *Claim*, run on Chrome, Firefox and Edge | axe DevTools |
 | Test automation | 93 data-driven tests, each run on Chromium, Firefox and WebKit (279 runs) | Playwright, TypeScript |
 | Performance | Load, stress and spike tests on the *Search Employee* flow, with CSV data and CSRF token handling | Apache JMeter |
-| Test data | Script that fills MySQL with 100 employees, job titles, departments and claims | Node.js, Faker.js |
+| Test data | Script that fills the database with 100 employees, job titles, departments and claims | Node.js, Faker.js |
 
 ## Repository structure
 
 ```
 .
-├── docker-compose.yml               # OrangeHRM (:8080) + MySQL (:3306)
+├── docker-compose.yml               # OrangeHRM (:8080) + MariaDB (:3306)
 ├── test-design/
 │   ├── test-cases.xlsx              # 97 test cases with steps, expected/actual results
 │   └── Test_design_report.pdf       # How each black-box technique was applied
@@ -68,7 +68,7 @@ docker compose up -d
 ```
 
 Open http://localhost:8080 and complete the installation wizard:
-- Database host: `mysql`
+- Database host: `db`
 - Database name: `orangehrm`
 - Database user and password: `orangehrm` / `orangehrm`
 - Admin account: `admin` / `Admin@12345`
@@ -101,6 +101,8 @@ You can override the defaults with the environment variables `BASE_URL`, `ORANGE
 **4. Run the JMeter test plan**
 
 Open `performance/orangehrm_search_employee.jmx` in JMeter, set the Thread Group to the scenario you want, and start the run. The thread group settings for each scenario are listed below and in the report.
+
+> The employee names in `search_data.csv` come from one run of the data generator, which produces random names. Replace them with names from your own database, otherwise the search requests return no results.
 
 | Scenario | Users | Ramp-up | Loops |
 |---|---|---|---|
